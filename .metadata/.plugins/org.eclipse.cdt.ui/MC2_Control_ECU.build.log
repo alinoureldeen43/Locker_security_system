@@ -1,0 +1,48 @@
+02:46:07 **** Incremental Build of configuration Debug for project MC2_Control_ECU ****
+make all 
+Building file: ../APP/app.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/app.d" -MT"APP/app.o" -c -o "APP/app.o" "../APP/app.c"
+In file included from ../APP/app.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/app.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/app.c
+ 
+Building file: ../MC2_Control_ECU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MC2_Control_ECU.d" -MT"MC2_Control_ECU.o" -c -o "MC2_Control_ECU.o" "../MC2_Control_ECU.c"
+Finished building: ../MC2_Control_ECU.c
+ 
+Building target: MC2_Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2_Control_ECU.map -mmcu=atmega32 -o "MC2_Control_ECU.elf"  ./MCAL/UART/uart.o  ./MCAL/TWI/twi.o  ./MCAL/TIMER/timer.o  ./MCAL/GPIO/gpio.o  ./HAL/EEPROM/external_eeprom.o  ./HAL/DC_MOTOR/dc_motor.o  ./HAL/BUZZER/buzzer.o  ./APP/app.o  ./MC2_Control_ECU.o   
+Finished building target: MC2_Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC2_Control_ECU.elf  >"MC2_Control_ECU.lss"
+Finished building: MC2_Control_ECU.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MC2_Control_ECU.elf  "MC2_Control_ECU.hex"
+Finished building: MC2_Control_ECU.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2_Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8234 bytes (25.1% Full)
+(.text + .data + .bootloader)
+
+Data:         30 bytes (1.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+02:46:07 Build Finished. 0 errors, 2 warnings. (took 551ms)
+

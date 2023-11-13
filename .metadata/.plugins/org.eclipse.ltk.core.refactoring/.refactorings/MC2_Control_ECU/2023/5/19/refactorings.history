@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MC2_Control_ECU/MCAL/I2C&apos; to &apos;TWI&apos;" description="Rename resource &apos;I2C&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MCAL/I2C" name="TWI" stamp="1683561739907" updateReferences="true"/>
+</session>
